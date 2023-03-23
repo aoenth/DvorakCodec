@@ -23,11 +23,11 @@ Then, add `DvorakEncoderDecoder` as a dependency for your target:
 )
 ```
 
-Alternatively, you can build the CLI and run it in your terminal
+Alternatively, you can build the CLI and move it into a location in your PATH.
 
 ```bash
-swift build -c release --target dv
-mv ./build/release/dv /usr/local/bin
+$ swift build -c release --target dv
+$ mv .build/release/dv /usr/local/bin
 ```
 ## Usage
 

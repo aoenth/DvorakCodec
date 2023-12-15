@@ -6,7 +6,7 @@
 //
 
 import ArgumentParser
-import DvorakEncoderDecoder
+import DvorakCodec
 import Foundation
 import Pasteboard
 

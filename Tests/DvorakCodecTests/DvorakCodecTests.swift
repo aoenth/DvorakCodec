@@ -1,5 +1,5 @@
 import XCTest
-import DvorakEncoderDecoder
+import DvorakCodec
 
 final class DvorakEncoderDecoderTests: XCTestCase {
     func testExample() throws {

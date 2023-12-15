@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "DvorakEncoderDecoder",
+    name: "DvorakCodec",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .executable(name: "dv", targets: ["DvorakEncoderDecoderCLI"]),
+        .executable(name: "dv", targets: ["DvorakCodecCLI"]),
         .library(
-            name: "DvorakEncoderDecoder",
-            targets: ["DvorakEncoderDecoder"]),
+            name: "DvorakCodec",
+            targets: ["DvorakCodec"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,17 +22,17 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .executableTarget(
-            name: "DvorakEncoderDecoderCLI",
+            name: "DvorakCodecCLI",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                "DvorakEncoderDecoder",
+                "DvorakCodec",
                 "Pasteboard",
             ]),
         .target(
-            name: "DvorakEncoderDecoder",
+            name: "DvorakCodec",
             dependencies: []),
         .testTarget(
-            name: "DvorakEncoderDecoderTests",
-            dependencies: ["DvorakEncoderDecoder"]),
+            name: "DvorakCodecTests",
+            dependencies: ["DvorakCodec"]),
     ]
 )

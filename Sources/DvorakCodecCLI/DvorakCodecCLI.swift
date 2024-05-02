@@ -16,10 +16,22 @@ struct Main: ParsableCommand {
     var decode: Bool = false
 
     @Flag(name: .shortAndLong)
+    var colemak: Bool = false
+
+    @Flag(name: .shortAndLong)
     var transformPasteboard: Bool = false
 
     func run() throws {
-        let operation = decode ? String.dvorakDecoded : String.dvorakEncoded
+        let operation = switch (colemak, decode) {
+        case (false, true):
+            String.dvorakDecoded
+        case (false, false):
+            String.dvorakEncoded
+        case (true, true):
+            String.colemakDecoded
+        case (true, false):
+            String.colemakEncoded
+        }
 
         if transformPasteboard {
             let pasteboardContent = getPasteboardContent()

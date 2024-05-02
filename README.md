@@ -1,6 +1,6 @@
 # DvorakCodec
 
-This is a Swift package that converts text from the QWERTY keyboard layout to the Dvorak keyboard layout and vice versa.
+This is a Swift package that converts text from the QWERTY keyboard layout to Dvorak or Colemak keyboard layout and vice versa.
 
 ## Installation
 
@@ -54,6 +54,8 @@ let decodedText = text.dvorakDecoded()
 print(decodedText)  // Output: "Hello, world!"
 ```
 
+Similarily, `colemakEncoded` and `colemakDecoded` are for the Colemak keyboard layout.
+
 ### As a CLI tool
 After installation, you can execute `dv` in the CLI. It takes in standard input and writes to standard output by default.
 
@@ -87,6 +89,12 @@ D.nnr!
 Adding the `-d` flag to decode from Dvorak encoding:
 ```bash
 $ echo D.nnr! | dv -d
+Hello!
+```
+
+Adding the `-c` flag to indicate Colemak coding.
+```bash
+$ echo Hfiiy! | dv -dc
 Hello!
 ```
 

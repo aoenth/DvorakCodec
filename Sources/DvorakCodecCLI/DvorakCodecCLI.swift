@@ -5,10 +5,10 @@
 //  Created by Peng, Kevin [C] on 2023-03-23.
 //
 
-import ArgumentParser
-import DvorakCodec
 import Foundation
+import DvorakCodec
 import Pasteboard
+import ArgumentParser
 
 @main
 struct Main: ParsableCommand {

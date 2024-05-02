@@ -12,4 +12,14 @@ final class DvorakEncoderDecoderTests: XCTestCase {
         XCTAssertEqual("Hello, world!".dvorakEncoded(), "D.nnrw ,rpne!")
         XCTAssertEqual("D.nnrw ,rpne!".dvorakDecoded(), "Hello, world!")
     }
+
+    func testExampleColemak() throws {
+
+        let qwerty = "\"'+,-./:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ[]_abcdefghijklmnopqrstuvwxyz{}"
+        let colemak = "\"'+,-./Oo<=>?ABCSFTDHUNEIMKY:QPRGLVWXJZ[]_abcsftdhuneimky;qprglvwxjz{}"
+        XCTAssertEqual(qwerty.colemakEncoded(), colemak)
+        XCTAssertEqual("asdf".colemakEncoded(), "arst")
+        XCTAssertEqual(colemak.colemakDecoded(), qwerty)
+        XCTAssertEqual("arst".colemakDecoded(), "asdf")
+    }
 }

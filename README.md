@@ -4,6 +4,8 @@ This is a Swift package that converts text from the QWERTY keyboard layout to Dv
 
 ## Installation
 
+Note that Swift 5.9 or later is required.
+
 You can add the DvorakCodec package to your project using Swift Package Manager. To do this, add the following line to your `Package.swift` file:
 
 ```swift
@@ -26,7 +28,7 @@ Then, add `DvorakCodec` as a dependency for your target:
 Alternatively, you can build the CLI and move it into a location in your PATH.
 
 ```bash
-$ swift build -c release --target dv
+$ swift build -c release --product dv
 $ mv .build/release/dv /usr/local/bin
 ```
 ## Usage
